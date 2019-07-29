@@ -1,0 +1,7 @@
+.letters {
+    width: calc(100%/13);
+    cursor: pointer;
+}
+.clicked {
+    color: #C0C0C0;
+}
