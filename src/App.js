@@ -13,7 +13,7 @@ const App =  () => {
   const [word, setWord] = useState(shuffle(words)[0]);
   const [usedLetters, addNewLetters] = useState([]);
 
-  //Arrow function for binding
+  //Réinitialise le jeu
   const initState = () => {
     setWord(shuffle(words)[0]);
     addNewLetters([]);
@@ -27,14 +27,11 @@ const App =  () => {
     )
   }
 
-  //Arrow function for binding
   const addLetter = letter => {
-    console.log(usedLetters)
     const newLettersArray = [...usedLetters];
     newLettersArray.push(letter);
 
     addNewLetters(newLettersArray);
-    console.log(usedLetters)
     computeDisplay(word, usedLetters);
   }
 
